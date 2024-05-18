@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=evice-width, user-scalable=no initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatiable" content="ie=edge">
+		<title>Chat Room</title>
+		<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/style.css">
+		
+	<!--<script src="webjars/socketjs-client/socketjs.min.js"></script>-->
+	<!--<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.2/dist/sockjs.min.js"></script>
+		<script src="webjars/jquery/jquery.min.js"></script>
+		<script src="webjars/stomp-websocket/stomp.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.1/dist/stomp.min.js"></script>
+		<script src="/script.js"></script>-->
+		<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	<script src="webjars/sockjs-client/sockjs.min.js"></script>
+	<script src="webjars/stomp-websocket/stomp.min.js"></script>
+	<script src="./script.js"></script>
+	</head>
+	<body style="background-color: skyblue;">
+		
+	<div id="name-from" class="d-flex align-items-center">
+		
+		
+		<div class="container-fluid">
+			
+			<div class="row">
+				<div class="heading"><h1>Welcome to Chat Room</h1></div>
+				<div class="col-md-4 offset-md-4">
+					
+					<div class="input-group">
+						
+						<input type="text" placeholder="Enter Your Name" id="name-value" autofocus class="form-control">
+						
+						<div class="input-group-append">
+							<button class="btn btn-dark" id="login">Enter</button>
+							
+						</div>
+						
+						
+					</div>
+					
+				<!--<div>
+					<img src="chatimage.png">
+				</div>-->
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		
+	</div>
+	
+	<div id="chat-Room" class="d-none">
+		
+		<div class="container-fluid">
+			
+			<div class="heading" style="margin-top: 50px;"><h1>Lets Start...</h1></div>
+			
+			<div class="row">
+				
+				<div class="col-md-4 offset-md-4">
+					
+					<div class="card heading" style="margin-top: 30px;">
+						<div class="card-body">
+							
+							
+						<div class="input-group">
+						
+						<input type="text" placeholder="Enter Your message" id="message-value" autofocus class="form-control">
+						
+						<div class="input-group-append">
+							<button class="btn btn-primary" id="send-btn">Send</button>
+							<button class="btn btn-danger" id="logout">LogOut</button>
+							
+						</div>
+						
+						
+					</div>
+							
+							<div class="table-responsive">
+								<table id="message-container-table">
+									
+								</table>
+								
+							</div>
+							
+						</div>
+					</div>
+					
+					
+				</div>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+	</div>
+	</body>
+	
+</html>
