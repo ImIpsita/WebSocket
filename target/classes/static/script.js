@@ -21,7 +21,9 @@ function connect(){
 }
 
 function showMessage(message){
-	
+	var nameValueDiv = $("#name-value");
+	var existingContent = nameValueDiv.html();
+	nameValueDiv.html(`<b>${message.name}</b>, ` + existingContent);
 	$("#message-container-table").prepend(`<tr><td><b>${message.name}: </b>${message.content}</td></tr>`)
 	
 }
@@ -33,6 +35,7 @@ let jsonob={
 	content:$("#message-value").val()
 }	
 stompClient.send("/app/message",{}, JSON.stringify (jsonob));
+$("#message-value").val('');
 }
 
 $(document).ready((e)=>{
@@ -43,10 +46,13 @@ $(document).ready((e)=>{
 		
 		//fetch name 
 		let name=$("#name-value").val()
+		if(name !=''){
 		localStorage.setItem("name",name)
-		
+		$('#title').html(`Hey <b>${name}</b>,Welcome in Chat Application:)`)
 		connect();
-		
+		}else{
+			alert("invalid Name");
+		}
 		
 	})
 	
